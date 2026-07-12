@@ -200,7 +200,7 @@ permalink: /buy-ravencoin/
   
   <h1>Instant Swaps &amp; Non-Custodial Platforms (No-KYC Options)</h1>
   <div class="exch-grid">
-    <a class="exch-card" href="https://changenow.io/" target="_blank" rel="noopener nofollow">
+    <a class="exch-card" href="https://changenow.io/?from=btc&to=rvn" target="_blank" rel="noopener nofollow">
       <span class="exch-logo"><img src="/assets/img/pages/exchanges/changenow.png" alt="ChangeNOW"></span>
       <span class="exch-name-block">
         <span class="exch-name">ChangeNOW</span>
@@ -251,7 +251,7 @@ permalink: /buy-ravencoin/
 
   <h1>Top Global Exchanges (KYC Verified Spot Volume)</h1>
   <div class="exch-grid">
-    <a class="exch-card" href="https://www.binance.com/" target="_blank" rel="noopener nofollow">
+    <a class="exch-card" href="https://www.binance.com/en/trade/RVN_USDT" target="_blank" rel="noopener nofollow">
       <span class="exch-logo"><img src="/assets/img/pages/exchanges/binance.png" alt="Binance"></span>
       <span class="exch-name-block">
         <span class="exch-name">Binance</span>
@@ -259,7 +259,7 @@ permalink: /buy-ravencoin/
       </span>
     </a>
 
-    <a class="exch-card" href="https://upbit.com/" target="_blank" rel="noopener nofollow">
+    <a class="exch-card" href="https://upbit.com/exchange?code=CRIX.UPBIT.KRW-RVN" target="_blank" rel="noopener nofollow">
       <span class="exch-logo"><img src="/assets/img/pages/exchanges/upbit.png" alt="Upbit"></span>
       <span class="exch-name-block">
         <span class="exch-name">Upbit</span>
@@ -267,7 +267,7 @@ permalink: /buy-ravencoin/
       </span>
     </a>
 
-    <a class="exch-card" href="https://www.bybit.com/" target="_blank" rel="noopener nofollow">
+    <a class="exch-card" href="https://www.bybit.com/en/trade/spot/RVN/USDT" target="_blank" rel="noopener nofollow">
       <span class="exch-logo"><img src="/assets/img/pages/exchanges/bybit.png" alt="Bybit"></span>
       <span class="exch-name-block">
         <span class="exch-name">Bybit</span>
@@ -275,7 +275,7 @@ permalink: /buy-ravencoin/
       </span>
     </a>
 
-    <a class="exch-card" href="https://www.okx.com/" target="_blank" rel="noopener nofollow">
+    <a class="exch-card" href="https://www.okx.com/trade-spot/rvn-usdt" target="_blank" rel="noopener nofollow">
       <span class="exch-logo"><img src="/assets/img/pages/exchanges/okx.png" alt="OKX"></span>
       <span class="exch-name-block">
         <span class="exch-name">OKX</span>
@@ -283,7 +283,7 @@ permalink: /buy-ravencoin/
       </span>
     </a>
 
-    <a class="exch-card" href="https://www.htx.com/" target="_blank" rel="noopener nofollow">
+    <a class="exch-card" href="https://www.htx.com/trade/rvn_usdt" target="_blank" rel="noopener nofollow">
       <span class="exch-logo"><img src="/assets/img/pages/exchanges/htx.png" alt="HTX"></span>
       <span class="exch-name-block">
         <span class="exch-name">HTX</span>
@@ -299,7 +299,7 @@ permalink: /buy-ravencoin/
       </span>
     </a>
 
-    <a class="exch-card" href="https://www.kucoin.com/" target="_blank" rel="noopener nofollow">
+    <a class="exch-card" href="https://www.kucoin.com/trade/RVN-USDT" target="_blank" rel="noopener nofollow">
       <span class="exch-logo"><img src="/assets/img/pages/exchanges/kucoin.png" alt="KuCoin"></span>
       <span class="exch-name-block">
         <span class="exch-name">KuCoin</span>
@@ -307,7 +307,7 @@ permalink: /buy-ravencoin/
       </span>
     </a>
 
-    <a class="exch-card" href="https://crypto.com/" target="_blank" rel="noopener nofollow">
+    <a class="exch-card" href="https://crypto.com/exchange/spot/trading/RVNUSDT" target="_blank" rel="noopener nofollow">
       <span class="exch-logo"><img src="/assets/img/pages/exchanges/crypto.png" alt="Crypto.com"></span>
       <span class="exch-name-block">
         <span class="exch-name">Crypto.com</span>
@@ -315,7 +315,7 @@ permalink: /buy-ravencoin/
       </span>
     </a>
 
-    <a class="exch-card" href="https://www.gate.io/" target="_blank" rel="noopener nofollow">
+    <a class="exch-card" href="https://www.gate.io/trade/RVN_USDT" target="_blank" rel="noopener nofollow">
       <span class="exch-logo"><img src="/assets/img/pages/exchanges/gateio.png" alt="Gate.io"></span>
       <span class="exch-name-block">
         <span class="exch-name">Gate.io</span>
@@ -323,7 +323,7 @@ permalink: /buy-ravencoin/
       </span>
     </a>
 
-    <a class="exch-card" href="https://www.mexc.com/" target="_blank" rel="noopener nofollow">
+    <a class="exch-card" href="https://www.mexc.com/exchange/RVN_USDT" target="_blank" rel="noopener nofollow">
       <span class="exch-logo"><img src="/assets/img/pages/exchanges/mexc.png" alt="MEXC"></span>
       <span class="exch-name-block">
         <span class="exch-name">MEXC</span>
@@ -331,7 +331,7 @@ permalink: /buy-ravencoin/
       </span>
     </a>
 
-    <a class="exch-card" href="https://www.bitget.com/" target="_blank" rel="noopener nofollow">
+    <a class="exch-card" href="https://www.bitget.com/spot/RVNUSDT" target="_blank" rel="noopener nofollow">
       <span class="exch-logo"><img src="/assets/img/pages/exchanges/bitget.png" alt="Bitget"></span>
       <span class="exch-name-block">
         <span class="exch-name">Bitget</span>
@@ -339,7 +339,7 @@ permalink: /buy-ravencoin/
       </span>
     </a>
 
-    <a class="exch-card" href="https://www.coinex.com/" target="_blank" rel="noopener nofollow">
+    <a class="exch-card" href="https://www.coinex.com/trade/RVN-USDT" target="_blank" rel="noopener nofollow">
       <span class="exch-logo"><img src="/assets/img/pages/exchanges/coinex.png" alt="CoinEx"></span>
       <span class="exch-name-block">
         <span class="exch-name">CoinEx</span>
@@ -347,7 +347,7 @@ permalink: /buy-ravencoin/
       </span>
     </a>
 
-    <a class="exch-card" href="https://bingx.com/" target="_blank" rel="noopener nofollow">
+    <a class="exch-card" href="https://bingx.com/en/trade/RVN-USDT" target="_blank" rel="noopener nofollow">
       <span class="exch-logo"><img src="/assets/img/pages/exchanges/bingx.png" alt="BingX"></span>
       <span class="exch-name-block">
         <span class="exch-name">BingX</span>
@@ -355,7 +355,7 @@ permalink: /buy-ravencoin/
       </span>
     </a>
 
-    <a class="exch-card" href="https://www.lbank.com/" target="_blank" rel="noopener nofollow">
+    <a class="exch-card" href="https://www.lbank.com/trade/rvn_usdt" target="_blank" rel="noopener nofollow">
       <span class="exch-logo"><img src="/assets/img/pages/exchanges/lbank.png" alt="LBank"></span>
       <span class="exch-name-block">
         <span class="exch-name">LBank</span>
@@ -363,7 +363,7 @@ permalink: /buy-ravencoin/
       </span>
     </a>
 
-    <a class="exch-card" href="https://www.digifinex.com/" target="_blank" rel="noopener nofollow">
+    <a class="exch-card" href="https://www.digifinex.com/en/trade/USDT/RVN" target="_blank" rel="noopener nofollow">
       <span class="exch-logo"><img src="/assets/img/pages/exchanges/digifinex.png" alt="DigiFinex"></span>
       <span class="exch-name-block">
         <span class="exch-name">DigiFinex</span>
@@ -371,7 +371,7 @@ permalink: /buy-ravencoin/
       </span>
     </a>
 
-    <a class="exch-card" href="https://bitvavo.com/" target="_blank" rel="noopener nofollow">
+    <a class="exch-card" href="https://bitvavo.com/en/rvn" target="_blank" rel="noopener nofollow">
       <span class="exch-logo"><img src="/assets/img/pages/exchanges/bitvavo.png" alt="Bitvavo"></span>
       <span class="exch-name-block">
         <span class="exch-name">Bitvavo</span>
@@ -379,7 +379,7 @@ permalink: /buy-ravencoin/
       </span>
     </a>
 
-    <a class="exch-card" href="https://whitebit.com/" target="_blank" rel="noopener nofollow">
+    <a class="exch-card" href="https://whitebit.com/trade/RVN_USDT" target="_blank" rel="noopener nofollow">
       <span class="exch-logo"><img src="/assets/img/pages/exchanges/whitebit.png" alt="WhiteBIT"></span>
       <span class="exch-name-block">
         <span class="exch-name">WhiteBIT</span>
@@ -387,7 +387,7 @@ permalink: /buy-ravencoin/
       </span>
     </a>
 
-    <a class="exch-card" href="https://www.xt.com/" target="_blank" rel="noopener nofollow">
+    <a class="exch-card" href="https://www.xt.com/trade/RVN_USDT" target="_blank" rel="noopener nofollow">
       <span class="exch-logo"><img src="/assets/img/pages/exchanges/xtcom.png" alt="XT.COM"></span>
       <span class="exch-name-block">
         <span class="exch-name">XT.COM</span>
@@ -395,7 +395,7 @@ permalink: /buy-ravencoin/
       </span>
     </a>
 
-    <a class="exch-card" href="https://phemex.com/" target="_blank" rel="noopener nofollow">
+    <a class="exch-card" href="https://phemex.com/spot/RVNUSDT" target="_blank" rel="noopener nofollow">
       <span class="exch-logo"><img src="/assets/img/pages/exchanges/phemex.png" alt="Phemex"></span>
       <span class="exch-name-block">
         <span class="exch-name">Phemex</span>
@@ -403,7 +403,7 @@ permalink: /buy-ravencoin/
       </span>
     </a>
 
-    <a class="exch-card" href="https://www.probit.com/" target="_blank" rel="noopener nofollow">
+    <a class="exch-card" href="https://www.probit.com/app/exchange/RVN-USDT" target="_blank" rel="noopener nofollow">
       <span class="exch-logo"><img src="/assets/img/pages/exchanges/probit.png" alt="ProBit Global"></span>
       <span class="exch-name-block">
         <span class="exch-name">ProBit Global</span>
