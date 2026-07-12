@@ -707,7 +707,6 @@ modalCacheRef: "4.7.0"
 
 <div class="rvn-home">
 
-  <!-- ============ HERO SECTION ============ -->
   <section class="rvn-hero">
     <div class="wrap rvn-hero-inner">
       <span class="rvn-eyebrow"><span class="dot"></span>Live on mainnet since 2018</span>
@@ -736,7 +735,6 @@ modalCacheRef: "4.7.0"
     </div>
   </section>
 
-  <!-- ============ BLOCKCHAIN STATISTICS ============ -->
   <div class="rvn-ledger">
     <div class="wrap">
       <div class="rvn-ledger-cell">
@@ -758,7 +756,6 @@ modalCacheRef: "4.7.0"
     </div>
   </div>
 
-  <!-- ============ TOKENIZED ASSET TABS ============ -->
   <section class="rvn-section rvn-assets">
     <div class="wrap">
       <div class="rvn-section-head">
@@ -846,45 +843,44 @@ modalCacheRef: "4.7.0"
     </div>
   </section>
 
-  <!-- ============ COMPARISON MATRIX ============ -->
   <section class="rvn-section rvn-why">
     <div class="wrap rvn-why-grid">
       <div class="rvn-why-content">
         <h2 class="rvn-why-title">What makes Ravencoin different from Bitcoin?</h2>
-<ul class="rvn-compare">
-  <li>
-    <span class="label">Core Focus</span>
-    <span class="value">Asset Tokenization vs Digital Gold</span>
-  </li>
-  <li>
-    <span class="label">Block Reward</span>
-    <span class="value">1,250 RVN vs 3.125 BTC</span>
-  </li>
-  <li>
-    <span class="label">Block Time</span>
-    <span class="value">1 min vs 10 min</span>
-  </li>
-  <li>
-    <span class="label">Total Supply</span>
-    <span class="value">21 Billion vs 21 Million</span>
-  </li>
-  <li>
-    <span class="label">Mining Algorithm</span>
-    <span class="value">KAWPOW (Anti-ASIC) vs SHA-256 (ASIC)</span>
-  </li>
-  <li>
-    <span class="label">Asset Issuance</span>
-    <span class="value">Native Layer-1 vs Complex L2 / Protocols</span>
-  </li>
-  <li>
-    <span class="label">Dividend Payments</span>
-    <span class="value">Native RVN Distribution vs Not Supported</span>
-  </li>
-  <li>
-    <span class="label">Avg. Transfer Fee</span>
-    <span class="value">Sub-Penny vs Variable ($1 - $10+)</span>
-  </li>
-</ul>
+        <ul class="rvn-compare">
+          <li>
+            <span class="label">Core Focus</span>
+            <span class="value">Asset Tokenization vs Digital Gold</span>
+          </li>
+          <li>
+            <span class="label">Block Reward</span>
+            <span class="value">1,250 RVN vs 3.125 BTC</span>
+          </li>
+          <li>
+            <span class="label">Block Time</span>
+            <span class="value">1 min vs 10 min</span>
+          </li>
+          <li>
+            <span class="label">Total Supply</span>
+            <span class="value">21 Billion vs 21 Million</span>
+          </li>
+          <li>
+            <span class="label">Mining Algorithm</span>
+            <span class="value">KAWPOW (Anti-ASIC) vs SHA-256 (ASIC)</span>
+          </li>
+          <li>
+            <span class="label">Asset Issuance</span>
+            <span class="value">Native Layer-1 vs Complex L2 / Protocols</span>
+          </li>
+          <li>
+            <span class="label">Dividend Payments</span>
+            <span class="value">Native RVN Distribution vs Not Supported</span>
+          </li>
+          <li>
+            <span class="label">Avg. Transfer Fee</span>
+            <span class="value">Sub-Penny vs Variable ($1 - $10+)</span>
+          </li>
+        </ul>
       </div>
       <div class="rvn-why-art">
         <img id="logo-why" class="fadeInRight" src="/assets/img/home/raven-flock.png" alt="ravencoin logo">
@@ -892,7 +888,6 @@ modalCacheRef: "4.7.0"
     </div>
   </section>
 
-  <!-- ============ COMMUNITY CALL TO ACTION ============ -->
   <section class="rvn-cta">
     <div class="wrap rvn-cta-inner">
       <div>
@@ -904,7 +899,6 @@ modalCacheRef: "4.7.0"
     </div>
   </section>
 
-  <!-- ============ STATIC RANKED EXCHANGE TABLE ============ -->
   <section class="rvn-section rvn-exchanges">
     <div class="wrap">
       <div class="rvn-section-head">
@@ -913,7 +907,6 @@ modalCacheRef: "4.7.0"
       </div>
 
       <div class="exch-grid">
-        <!-- 1. Binance -->
         <a class="exch-card" href="https://www.binance.com/" target="_blank" rel="noopener nofollow">
           <span class="exch-logo"><img src="/assets/img/pages/exchanges/binance.png" alt="Binance"></span>
           <span class="exch-name-block">
@@ -922,7 +915,6 @@ modalCacheRef: "4.7.0"
           </span>
         </a>
 
-        <!-- 2. Bybit -->
         <a class="exch-card" href="https://www.bybit.com/" target="_blank" rel="noopener nofollow">
           <span class="exch-logo"><img src="/assets/img/pages/exchanges/bybit.png" alt="Bybit"></span>
           <span class="exch-name-block">
@@ -931,7 +923,6 @@ modalCacheRef: "4.7.0"
           </span>
         </a>
 
-        <!-- 3. OKX -->
         <a class="exch-card" href="https://www.okx.com/" target="_blank" rel="noopener nofollow">
           <span class="exch-logo"><img src="/assets/img/pages/exchanges/okx.png" alt="OKX"></span>
           <span class="exch-name-block">
@@ -940,7 +931,6 @@ modalCacheRef: "4.7.0"
           </span>
         </a>
 
-        <!-- 4. Kraken -->
         <a class="exch-card" href="https://www.kraken.com/" target="_blank" rel="noopener nofollow">
           <span class="exch-logo"><img src="/assets/img/pages/exchanges/kraken.png" alt="Kraken"></span>
           <span class="exch-name-block">
@@ -949,7 +939,6 @@ modalCacheRef: "4.7.0"
           </span>
         </a>
 
-        <!-- 5. KuCoin -->
         <a class="exch-card" href="https://www.kucoin.com/" target="_blank" rel="noopener nofollow">
           <span class="exch-logo"><img src="/assets/img/pages/exchanges/kucoin.png" alt="KuCoin"></span>
           <span class="exch-name-block">
@@ -958,7 +947,6 @@ modalCacheRef: "4.7.0"
           </span>
         </a>
 
-        <!-- 6. Gate.io -->
         <a class="exch-card" href="https://www.gate.io/" target="_blank" rel="noopener nofollow">
           <span class="exch-logo"><img src="/assets/img/pages/exchanges/gateio.png" alt="Gate.io"></span>
           <span class="exch-name-block">
@@ -967,7 +955,6 @@ modalCacheRef: "4.7.0"
           </span>
         </a>
 
-        <!-- 7. MEXC -->
         <a class="exch-card" href="https://www.mexc.com/" target="_blank" rel="noopener nofollow">
           <span class="exch-logo"><img src="/assets/img/pages/exchanges/mexc.png" alt="MEXC"></span>
           <span class="exch-name-block">
@@ -976,7 +963,6 @@ modalCacheRef: "4.7.0"
           </span>
         </a>
 
-        <!-- 8. HTX -->
         <a class="exch-card" href="https://www.htx.com/" target="_blank" rel="noopener nofollow">
           <span class="exch-logo"><img src="/assets/img/pages/exchanges/htx.png" alt="HTX"></span>
           <span class="exch-name-block">
@@ -985,7 +971,6 @@ modalCacheRef: "4.7.0"
           </span>
         </a>
 
-        <!-- 9. Bitget -->
         <a class="exch-card" href="https://www.bitget.com/" target="_blank" rel="noopener nofollow">
           <span class="exch-logo"><img src="/assets/img/pages/exchanges/bitget.png" alt="Bitget"></span>
           <span class="exch-name-block">
@@ -994,7 +979,6 @@ modalCacheRef: "4.7.0"
           </span>
         </a>
 
-        <!-- 10. CoinEx -->
         <a class="exch-card" href="https://www.coinex.com/" target="_blank" rel="noopener nofollow">
           <span class="exch-logo"><img src="/assets/img/pages/exchanges/coinex.png" alt="CoinEx"></span>
           <span class="exch-name-block">
@@ -1010,7 +994,6 @@ modalCacheRef: "4.7.0"
     </div>
   </section>
 
-  <!-- ============ SOCIAL COMMUNICATION CHANNELS ============ -->
   <section class="rvn-social">
     <div class="wrap">
       <h2>Ecosystem Updates</h2>

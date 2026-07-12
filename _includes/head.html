@@ -5,7 +5,6 @@
   {%- seo -%}
   <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
   
-  <!-- Modern Global Premium Web3 Typography Array Stack -->
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
   
   <link href="{{ "/assets/css/material-design-iconic-font.min.css" | relative_url }}" rel="stylesheet">
@@ -27,5 +26,96 @@
       font-family: 'Space Grotesk', sans-serif;
       letter-spacing: -0.02em;
     }
+
+    /* ---------- Layout Protection Rules ---------- */
+    .site-title, .site-title img {
+      flex-shrink: 0 !important; /* Absolutely prevents logo from being crushed or hidden */
+    }
+
+    .page-link {
+      white-space: nowrap !important; /* Prevents text elements from breaking onto multiple lines */
+    }
+    
+    .trigger {
+      flex-wrap: nowrap !important; /* Locks all menu links in a rigid, clean row grid */
+    }
+
+    /* ===================================================
+       Premium Web3 Reskin for Google Translate Widget
+       (Scaled down & optimized for absolute inline alignment)
+    =================================================== */
+    .goog-te-gadget-simple {
+      background-color: rgba(255, 255, 255, 0.03) !important;
+      border: 1px solid rgba(255, 255, 255, 0.08) !important;
+      padding: 4px 10px !important; /* Smaller, compact inner padding padding */
+      border-radius: 6px !important; /* Matches modern clean design system layout borders */
+      cursor: pointer !important;
+      font-family: 'Inter', sans-serif !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      height: 28px !important; /* Explicit smaller fixed height to line up with link baselines */
+      box-sizing: border-box !important;
+      vertical-align: middle !important;
+      white-space: nowrap !important;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+
+    .goog-te-gadget-simple:hover {
+      background-color: rgba(255, 255, 255, 0.08) !important;
+      border-color: rgba(255, 255, 255, 0.2) !important;
+      transform: translateY(-1px);
+    }
+
+    .goog-te-gadget-simple span, 
+    .goog-te-menu-value span {
+      color: #94A3B8 !important; /* Inherits navigation dark slate link hue color */
+      font-size: 11px !important; /* Compact, smaller typography alignment */
+      font-weight: 600 !important;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .goog-te-gadget-simple:hover span {
+      color: #FFFFFF !important;
+    }
+
+    .goog-te-gadget-icon {
+      display: none !important;
+    }
+
+    .goog-te-menu-value {
+      margin: 0 !important;
+      display: flex !important;
+      align-items: center !important;
+      gap: 4px;
+    }
+
+    .goog-te-menu-value span:last-child {
+      color: #FF5A1F !important;
+      font-size: 9px !important;
+      margin-left: 2px;
+    }
+
+    .goog-te-banner-frame.skiptranslate, 
+    .goog-te-banner-frame,
+    #goog-gt-tt {
+      display: none !important;
+    }
+    
+    body {
+      top: 0px !important;
+    }
   </style>
+
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,es,fr,de,zh-CN,ja,ko,pt,ru,it',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
