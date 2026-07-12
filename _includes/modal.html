@@ -1,47 +1,67 @@
 {% if page.modalContent %}
-<div id="{{ page.modalId }}" class="fixed pin z-50 overflow-auto bg-smoke-light hidden opacity-transition hide-opacity">
-  <div class="modal-notification relative p-8 bg-white w-full max-w-md m-auto flex-col flex">
-    <span id="closeButton" class="absolute pin-t pin-r p-2 z-10">
-      <svg class="h-6 w-6 fill-current" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title>
-        <path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"
-        /></svg>
+<div id="{{ page.modalId }}" class="fixed inset-0 z-50 overflow-auto hidden opacity-transition hide-opacity" style="position: fixed; inset: 0; display: none; align-items: center; justify-content: center; padding: 24px; background: rgba(5, 6, 10, 0.8); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);">
+  <div class="modal-notification" style="position: relative; background: #121624; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 20px; padding: 36px; width: 100%; max-width: 440px; box-shadow: 0 30px 60px -15px rgba(0,0,0,0.6); animation: modalEnter 0.4s cubic-bezier(0.16, 1, 0.3, 1);">
+    
+    <!-- Action Dismiss Trigger Element Component -->
+    <span id="closeButton" style="position: absolute; top: 20px; right: 20px; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 50%; cursor: pointer; color: #94A3B8; transition: all 0.15s ease;">
+      <svg style="width: 14px; height: 14px; fill: currentColor;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+        <path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/>
+      </svg>
     </span>
-    {% if page.modalTitle %}<h3>{{ page.modalTitle }}</h3>{% endif %}
-    <div className="modal-content">
+    
+    {% if page.modalTitle %}
+      <h3 style="color: #FFFFFF; font-size: 20px; font-weight: 700; margin-top: 0; margin-bottom: 12px; padding-right: 24px;">{{ page.modalTitle }}</h3>
+    {% endif %}
+    
+    <div class="modal-content" style="color: #94A3B8; font-size: 14px; line-height: 1.6;">
       {{ page.modalContent }}
     </div>
   </div>
 </div>
+
 <style>
-  .bg-smoke-light {
-    background-color: rgba(0, 0, 0, 0.4);
+  @keyframes modalEnter {
+    from { opacity: 0; transform: scale(0.95) translateY(10px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+  }
+  .modal-content a {
+    color: #FF5A1F !important;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s ease;
+  }
+  .modal-content a:hover {
+    border-bottom-color: #FF5A1F;
+  }
+  #closeButton:hover {
+    color: #FFFFFF !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
   }
 </style>
+
 {% if page.modalId %}
 <script>
   (function () {
     var id = document.getElementById("{{ page.modalId }}");
     var closeButton = document.getElementById("closeButton");
-    var modalId = "modal-{{ page.modalId }}";
-    var modalCacheRef = "version-{{page.modalCacheRef}}"
+    var modalCacheRef = "version-{{ page.modalCacheRef }}"
     if (typeof Storage != "undefined") {
       if (!localStorage.getItem(modalCacheRef)) {
         setTimeout(function() {
-          id.classList.remove('hidden')
-          id.classList.add('flex')
-          setTimeout(function() {
-            id.classList.remove('hide-opacity')
-          }, 1000)
+          id.style.display = 'flex';
           closeButton.addEventListener("click", function () {
-            id.classList.add('hide-opacity')
+            id.style.opacity = '0';
             setTimeout(function() {
-              id.classList.add('hidden')
-              id.classList.remove('flex')
-            }, 1000)
+              id.style.display = 'none';
+            }, 300)
           })
-        }, 5000)
+        }, 3000)
       }
       localStorage.setItem(modalCacheRef, "true");
     }
   })()
-</script> {% endif %} {% endif %}
+</script> 
+{% endif %}
+{% endif %}

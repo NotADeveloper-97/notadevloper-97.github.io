@@ -1,12 +1,24 @@
-<div class="top-bar">
+<div class="top-bar" style="background: #0B0E17; border-bottom: 1px solid rgba(255, 255, 255, 0.06); padding: 8px 0;">
   <div class="wrapper">
-    <div class="top-bar-content">
-      <div>
-    
+    <div class="top-bar-content" style="display: flex; justify-content: space-between; align-items: center;">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #94A3B8; letter-spacing: 0.05em;">
+        ASSET ISSUANCE PROTOCOL
       </div>
-      <ul class="social-media-links">
-        {%- if site.github_username -%}<li><a href="https://github.com/{{ site.github_username| cgi_escape | escape }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg></a></li>{%- endif -%}
-        {%- if site.twitter_username -%}<li><a href="https://twitter.com/{{ site.twitter_username| cgi_escape | escape }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#twitter' | relative_url }}"></use></svg></a></li>{%- endif -%}
+      <ul class="social-media-links" style="display: flex; gap: 16px; list-style: none; margin: 0; padding: 0;">
+        {%- if site.github_username -%}
+        <li>
+          <a href="https://github.com/{{ site.github_username | cgi_escape | escape }}" target="_blank" style="color: #94A3B8; transition: color 0.15s ease;">
+            <svg class="svg-icon" style="width: 16px; height: 16px; fill: currentColor;"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg>
+          </a>
+        </li>
+        {%- endif -%}
+        {%- if site.twitter_username -%}
+        <li>
+          <a href="https://twitter.com/{{ site.twitter_username | cgi_escape | escape }}" target="_blank" style="color: #94A3B8; transition: color 0.15s ease;">
+            <svg class="svg-icon" style="width: 16px; height: 16px; fill: currentColor;"><use xlink:href="{{ '/assets/minima-social-icons.svg#twitter' | relative_url }}"></use></svg>
+          </a>
+        </li>
+        {%- endif -%}
       </ul>
     </div>
   </div>

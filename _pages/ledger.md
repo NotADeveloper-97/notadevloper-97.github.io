@@ -6,99 +6,93 @@ bannerImage: /assets/img/pages/wallet/wallet-banner.jpg
 permalink: /ledger/
 ---
 
-<div class="wrapper mt-16 pb-20">
-  <h2>How to use the Ledger Nano S and Ledger Nano X</h2>
+<style>
+  .rvn-ledger-container {
+    font-family: 'Inter', sans-serif;
+    color: #111827;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 60px 24px;
+  }
+  .rvn-ledger-container h2, .rvn-ledger-container h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    color: #090B11;
+  }
+  .rvn-ledger-container h2 { font-size: 32px; border-bottom: 2px solid #ECEEF1; padding-bottom: 8px; margin-bottom: 28px; }
+  .rvn-ledger-container h3 { font-size: 22px; margin-top: 40px; color: #3B52C6; }
+  .rvn-ledger-container p { line-height: 1.6; color: #4B5563; }
+  
+  .rvn-step-list {
+    list-style: none;
+    padding: 0;
+    margin: 24px 0;
+  }
+  .rvn-step-list li {
+    position: relative;
+    padding-left: 48px;
+    margin-bottom: 18px;
+    line-height: 1.6;
+    color: #4B5563;
+  }
+  .rvn-step-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 24px;
+    height: 24px;
+    background: rgba(255, 90, 31, 0.1);
+    color: #FF5A1F;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 12px;
+  }
+  .rvn-kbd {
+    font-family: 'IBM Plex Mono', monospace;
+    background: #F3F4F6;
+    border: 1px solid #E5E7EB;
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-size: 13px;
+    color: #1F2937;
+  }
+</style>
 
-  <p>The Ledger Nano S and Ledger Nano X are hardware wallets. Hardware wallets are a very secure way of storing the private keys used to spend your coins. Installing the Ravencoin app will allow you to manage your Ravencoin. However, it does not currently support managing Ravencoin assets at this time. When that function is available this document will be expanded to include instructions on how to manage Ravencoin assets.</p>
+<div class="rvn-ledger-container">
+  <h2>How to use Ledger Nano S and Ledger Nano X</h2>
+  <p>The Ledger Nano S and Ledger Nano X are hardware wallets designed to securely lock private key access inside offline physical storage elements. Installing the Ravencoin application allows you to monitor and signatures regular transactions safely. <em>Note: Native internal management of Ravencoin custom asset layers is currently unsupported on ledger firmware interfaces at this time.</em></p>
 
-  <br>
   <h3>Before you begin</h3>
-
-  <ul>
-    <li>Download and install <a href="https://support.ledger.com/hc/en-us/articles/360006395553">Ledger Live</a>.</li>
-    <li><a href="https://support.ledger.com/hc/en-us/articles/360006395233">Set up</a> your Ledger device.</li>
-    <li><a href="https://support.ledger.com/hc/en-us/articles/360002731113-Update-Ledger-Nano-S-firmware">Update</a> to the latest Ledger firmware if needed.</li>
-    <li>Install the latest <a href="https://support.ledger.com/hc/en-us/articles/115005195945">Bitcoin app</a> on your device, as the Ravencoin app requires it.</li>
+  <ul class="rvn-step-list">
+    <li>Download and deploy the official desktop version of <a href="https://support.ledger.com/hc/en-us/articles/360006395553" target="_blank">Ledger Live</a>.</li>
+    <li>Initialize and secure your basic Ledger hardware key configuration profile.</li>
+    <li>Verify that your physical device is running the latest baseline core firmware modules.</li>
+    <li>Ensure the official <strong>Bitcoin App</strong> is installed first, as the Ravencoin engine shares base library files.</li>
   </ul>
 
-  <br>
-  <h3>Installing the Ravencoin app on the Ledger device</h3>
-
-  <ul>
-    <li>Connect and unlock your device.</li>
-    <li>Open Ledger Live and select Manager from the menu.</li>
-    <li>If prompted, allow the manager on your device.</li>
-    <li>Find the Ravencoin app in the app catalog.</li>
-    <li>Click the install button for the Ravencoin app.</li>
-    <li>An installation window will appear. If you receive a dialog stating "app required", it means you need to install or upgrade to the latest Bitcoin app first.</li>
-    <li>Close the installation window and ledger live after the installation is confirmed.</li>
+  <h3>Installing the Ravencoin Ledger Module</h3>
+  <ul class="rvn-step-list">
+    <li>Connect your physical hardware device via USB and input your custom access PIN.</li>
+    <li>Open Ledger Live and navigate directly into the <span class="rvn-kbd">Manager</span> tab menu interface.</li>
+    <li>Confirm and allow device connection permissions on your hardware screen if requested.</li>
+    <li>Locate the Ravencoin entry listing within the App Catalog selection tree.</li>
+    <li>Click <span class="rvn-kbd">Install</span>. If an error block requests dependency profiles, update your Bitcoin client application framework first.</li>
   </ul>
 
-  <br>
-  <h3>Installing the Electrum-Ravencoin wallet</h3>
+  <h3>Setting Up Electrum-Ravencoin</h3>
+  <p>To orchestrate external transfers alongside cold-storage device protections, download the specialized desktop utility suite: <a href="https://github.com/Electrum-RVN-SIG/electrum-ravencoin" target="_blank" style="font-weight:600; color:#FF5A1F;">Electrum-Ravencoin Wallet Client →</a></p>
 
-  <p>Download the <a href="https://github.com/Electrum-RVN-SIG/electrum-ravencoin">Electrum-Ravencoin</a> wallet to manage your Ravencoin with a ledger device.
-    For prebuilt binaries, check the <a href="https://github.com/Electrum-RVN-SIG/electrum-ravencoin/releases">releases tab.</a>
-  </p>
-
-  <p>When setting up the Electrum-Ravencoin wallet for the first time follow these steps:</p>
-
-  <ul>
-    <li>You will need to connect your ledger device to your computer, unlock it and enter the Ravencoin app before proceeding.</li>
-    <li>Ensure ledger-live is closed and open Electrum-Ravencoin.</li>
-    <li>On the first screen you'll be presented with a text box which has the name of the wallet file that will be created on your computer. It will have a name of default_wallet. You can either rename this or leave it as is and click next.</li>
-    <li>On the second screen you'll be presented with three options: Standard wallet, Multi-signature wallet and Import Ravencoin addresses or private keys. Choose the Standard Wallet option and click next.</li>
-    <li>On the third screen you'll see four options: Create a new seed, I already have a seed, Use a master key and Use a hardware device. Select Use a hardware device and click next.</li>
-    <li>The program will scan to see if a hardware device is available. If so, you should see the option to select an unnamed ledger [ledger, initialized]. Click next.</li>
-    <li>You will be asked to choose the type of addresses in your wallet, there is only one option so you can leave that alone. In the text box below it will show the correct derivation path. Click next.</li>
-    <li>The next screen will ask if you want to encrypt the wallet file. This file contains metadata and a master public key to watch the addresses you manage using the application. Private keys are never shared with the application or computer and remain on the device. If you do encrypt the wallet file, you will need to have the device connected and the Ravencoin app open to use the wallet. If you don't encrypt the wallet file, you'll be able to open it without the device but the device will still be required when you send coins or verify a receiving address.</li>
-    <li>The wallet is now set up.</li>
+  <ul class="rvn-step-list">
+    <li>Attach your Ledger device, enter your lock PIN, and access the native on-device <span class="rvn-kbd">Ravencoin</span> dashboard.</li>
+    <li>Launch the Electrum-Ravencoin application on your workstation while closing default Ledger Live scripts.</li>
+    <li>Select your workspace file path profile name and advance past the wallet profile naming confirmation block.</li>
+    <li>When presented with construction parameters, explicitly mark <span class="rvn-kbd">Standard Wallet</span> as your choice.</li>
+    <li>On keys source allocation steps, click <span class="rvn-kbd">Use a hardware device</span> and advance.</li>
+    <li>Select the scanned hardware identity label: <span class="rvn-kbd">an unnamed ledger [ledger, initialized]</span>.</li>
+    <li>Confirm the standard derivation path configurations without manual string overrides.</li>
+    <li>Choose whether to encrypt configuration metadata file caches locally on your computer to finish setup.</li>
   </ul>
-
-  <p>When using the Electrum-Ravencoin wallet after initial setup:</p>
-
-  <ul>
-    <li>If you encrypted your wallet file, you'll need to connect your Ledger device and open the Ravencoin app.</li>
-    <li>In the Electrum-Ravencoin wallet select the wallet file you want to open and click next.</li>
-    <li>The wallet will open and you can send and receive RVN.</li>
-  </ul>
-
-  <br>
-  <h3>Using the Electrum-Ravencoin wallet</h3>
-
-  <p>When the wallet opens you will see five options across the top: File, Wallet, View, Tools and Help. You will also see three tabs labeled History, Send and Receive. When the wallet is open your account balance will be shown in the bottom left hand corner of the wallet application. This will be visible no matter what tab you have open. The History tab will show the History of transactions using your accounts, the Send tab will allow you to create and broadcast transactions to the Ravencoin blockchain and the Receive tab will allow you to choose and verify a receiving address for incoming RVN.</p>
-
-  <br>
-  <h3>Using the Electrum-Ravencoin wallet to receive RVN</h3>
-
-  <ul>
-    <li>Click the Receive tab.</li>
-    <li>The wallet will choose a receiving address automatically which will be displayed in a text box labeled "Receiving address". You can use a previously used address if you would like but this doesn't offer optimal privacy.</li>
-    <li>To verify the receiving address on your device, click the eye icon on the right-hand side of the "Receiving address" text box.</li>
-    <li>A little text box with the words "showing address" will appear.</li>
-    <li>Verify the receiving address on your Ledger device by clicking the right button a few times to verify the full address and then select to approve or reject the address.</li>
-    <li>Enter the requested amount of RVN to receive and click Save.</li>
-    <li>Provide the receiving address to the person who will be sending you RVN.</li>
-  </ul>
-
-  <br>
-  <h3>Using the Electrum-Ravencoin wallet to send RVN</h3>
-
-  <ul>
-    <li>Click the Send Tab.</li>
-    <li>Paste the recipient address into the "Pay to" text box.</li>
-    <li>Enter an optional description for your own records.</li>
-    <li>Enter the amount of RVN you wish to send into the "Amount" text box.</li>
-    <li>Click the Preview button to preview the transaction before sending it to the Ledger device.</li>
-    <li>Click the Send button.</li>
-    <li>A small window will appear telling you the amount to be sent and the mining fee for the transaction.</li>
-    <li>Click Yes to proceed.</li>
-    <li>Review and confirm the transaction details on your device. You may have to wait a few seconds for the details to appear.</li>
-    <li>Click the right button a few times to verify the amount and recipient address and then select to approve or reject the transaction.</li>
-  </ul>
-
-  <br>
-  <h3>Support</h3>
-
-  <p>If you need any help using your Ledger device with Ravencoin, you can contact the community through <a href="https://t.me/RavencoinDev">Telegram</a> and <a href="https://discord.gg/VuubYncHz4">Discord</a>.</p>
 </div>

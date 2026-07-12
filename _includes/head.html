@@ -4,7 +4,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {%- seo -%}
   <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Raleway:300,400,500,600,700" rel="stylesheet">
+  
+  <!-- Modern Global Premium Web3 Typography Array Stack -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+  
   <link href="{{ "/assets/css/material-design-iconic-font.min.css" | relative_url }}" rel="stylesheet">
   <link href="{{ "/assets/css/tailwind.min.css" | relative_url }}" rel="stylesheet">
   <link href="{{ "/assets/css/animate.min.css" | relative_url }}" rel="stylesheet">
@@ -12,4 +15,17 @@
   {%- feed_meta -%}
   <script async type="text/javascript" src="/assets/js/waypoints.min.js"></script>
   {% include scripts.html %}
+  
+  <style>
+    /* Global design override configuration blocks */
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background-color: #F8F9FA;
+      color: #0F172A;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Space Grotesk', sans-serif;
+      letter-spacing: -0.02em;
+    }
+  </style>
 </head>
