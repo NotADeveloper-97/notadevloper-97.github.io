@@ -8,38 +8,51 @@ permalink: /buy-ravencoin/
 
 <style>
   /* ---------------------------------------------------
-      Modern Refined Web3 Design System Tokens
+      Modern Premium Web3 Design System Tokens
   --------------------------------------------------- */
-  .rvn-buy-container {
-    --bg-dark: #090B11;
-    --bg-card-dark: #121624;
-    --bg-light: #F8F9FA;
-    --bg-card-light: #FFFFFF;
-    --brand-ember: #FF5A1F;
-    --brand-ember-hover: #E04810;
-    --brand-navy: #3B52C6;
-    --text-primary-dark: #FFFFFF;
-    --text-secondary-dark: #94A3B8;
-    --text-primary-light: #111827;
-    --text-secondary-light: #4B5563;
-    --border-dark: rgba(255, 255, 255, 0.08);
-    --border-light: rgba(17, 24, 39, 0.05);
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap');
 
-    font-family: 'Inter', sans-serif;
-    max-width: 1200px;
+  .rvn-buy-container {
+    --brand-ember: #FF5A1F;
+    --brand-ember-rgb: 255, 90, 31;
+    --brand-navy: #3B52C6;
+    --brand-navy-rgb: 59, 82, 198;
+    
+    --text-primary: #0F172A;
+    --text-secondary: #64748B;
+    --bg-card: #FFFFFF;
+    --border-color: #E2E8F0;
+    --card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
+    --card-shadow-hover: 0 20px 25px -5px rgba(59, 82, 198, 0.1), 0 8px 10px -6px rgba(59, 82, 198, 0.1);
+
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    max-width: 1240px;
     margin: 0 auto;
     padding: 60px 24px;
+    background-color: #FAFAFB;
   }
 
+  /* ---------- Section Headers ---------- */
   .rvn-buy-container h1 {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 700;
-    color: var(--text-primary-light);
+    color: var(--text-primary);
     margin-top: 56px;
-    margin-bottom: 24px;
-    border-left: 4px solid var(--brand-ember);
-    padding-left: 14px;
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    letter-spacing: -0.02em;
+  }
+
+  .rvn-buy-container h1::before {
+    content: '';
+    display: inline-block;
+    width: 5px;
+    height: 24px;
+    background: linear-gradient(135deg, var(--brand-ember), #FF7A45);
+    border-radius: 4px;
   }
 
   .rvn-buy-container h1:first-of-type {
@@ -49,44 +62,73 @@ permalink: /buy-ravencoin/
   /* ---------- Exchange Card Grid ---------- */
   .exch-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 16px;
-    margin-bottom: 48px;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+    margin-bottom: 56px;
   }
 
   .exch-card {
     position: relative;
     display: flex;
     align-items: center;
-    gap: 14px;
-    background: #FFFFFF;
-    border: 1px solid var(--border-light);
-    border-radius: 14px;
-    padding: 16px 18px;
+    gap: 16px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 18px 20px;
     text-decoration: none;
     color: inherit;
-    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    box-shadow: var(--card-shadow);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+  }
+
+  /* Subtle background accent glow on hover */
+  .exch-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(var(--brand-navy-rgb), 0.2), transparent 60%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.25s ease;
   }
 
   .exch-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 14px 26px -10px rgba(15, 23, 42, 0.14);
-    border-color: rgba(59, 82, 198, 0.25);
-    color: inherit;
+    transform: translateY(-4px);
+    box-shadow: var(--card-shadow-hover);
+    border-color: rgba(var(--brand-navy-rgb), 0.3);
     text-decoration: none;
+    color: inherit;
   }
 
+  .exch-card:hover::after {
+    opacity: 1;
+  }
+
+  /* ---------- Logo Wrapper ---------- */
   .exch-logo {
-    flex: 0 0 44px;
-    width: 44px;
-    height: 44px;
-    border-radius: 11px;
-    background: #FAFBFC;
-    border: 1px solid #ECEEF1;
+    flex: 0 0 48px;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    transition: transform 0.25s ease;
+  }
+
+  .exch-card:hover .exch-logo {
+    transform: scale(1.05);
+    background: #FFFFFF;
+    border-color: #CBD5E1;
   }
 
   .exch-logo img {
@@ -96,38 +138,61 @@ permalink: /buy-ravencoin/
     padding: 6px;
   }
 
+  /* ---------- Content Block ---------- */
   .exch-name-block { 
     min-width: 0; 
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
   }
 
   .exch-name {
     font-weight: 600;
-    font-size: 14.5px;
-    color: var(--text-primary-light);
+    font-size: 15px;
+    color: var(--text-primary);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     display: block;
+    letter-spacing: -0.01em;
   }
 
+  /* ---------- Pills & Badges ---------- */
   .exch-badge {
-    display: inline-block;
-    margin-top: 3px;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.04em;
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
     text-transform: uppercase;
     color: var(--brand-ember);
-    background: rgba(255, 90, 31, 0.08);
-    border: 1px solid rgba(255, 90, 31, 0.18);
-    border-radius: 5px;
-    padding: 2px 6px;
+    background: rgba(var(--brand-ember-rgb), 0.08);
+    border: 1px solid rgba(var(--brand-ember-rgb), 0.15);
+    border-radius: 6px;
+    padding: 2px 8px;
+    white-space: nowrap;
   }
 
   .exch-badge-foundation {
     color: var(--brand-navy);
-    background: rgba(59, 82, 198, 0.08);
-    border: 1px solid rgba(59, 82, 198, 0.18);
+    background: rgba(var(--brand-navy-rgb), 0.07);
+    border: 1px solid rgba(var(--brand-navy-rgb), 0.14);
+  }
+
+  /* Responsive Adjustments */
+  @media (max-width: 640px) {
+    .rvn-buy-container {
+      padding: 32px 16px;
+    }
+    .exch-grid {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    .rvn-buy-container h1 {
+      font-size: 20px;
+      margin-top: 40px;
+    }
   }
 </style>
 
@@ -135,7 +200,6 @@ permalink: /buy-ravencoin/
   
   <h1>Instant Swaps &amp; Non-Custodial Platforms (No-KYC Options)</h1>
   <div class="exch-grid">
-    <!-- ChangeNOW -->
     <a class="exch-card" href="https://changenow.io/" target="_blank" rel="noopener nofollow">
       <span class="exch-logo"><img src="/assets/img/pages/exchanges/changenow.png" alt="ChangeNOW"></span>
       <span class="exch-name-block">
@@ -144,7 +208,6 @@ permalink: /buy-ravencoin/
       </span>
     </a>
 
-    <!-- Changelly -->
     <a class="exch-card" href="https://changelly.com/" target="_blank" rel="noopener nofollow">
       <span class="exch-logo"><img src="/assets/img/pages/exchanges/changelly.png" alt="Changelly"></span>
       <span class="exch-name-block">
@@ -153,7 +216,6 @@ permalink: /buy-ravencoin/
       </span>
     </a>
 
-    <!-- StealthEX -->
     <a class="exch-card" href="https://stealthex.io/" target="_blank" rel="noopener nofollow">
       <span class="exch-logo"><img src="/assets/img/pages/exchanges/stealthex.png" alt="StealthEX"></span>
       <span class="exch-name-block">
@@ -162,7 +224,6 @@ permalink: /buy-ravencoin/
       </span>
     </a>
 
-    <!-- SimpleSwap -->
     <a class="exch-card" href="https://simpleswap.io/" target="_blank" rel="noopener nofollow">
       <span class="exch-logo"><img src="/assets/img/pages/exchanges/simpleswap.png" alt="SimpleSwap"></span>
       <span class="exch-name-block">
@@ -171,7 +232,6 @@ permalink: /buy-ravencoin/
       </span>
     </a>
 
-    <!-- SwapSpace -->
     <a class="exch-card" href="https://swapspace.co/" target="_blank" rel="noopener nofollow">
       <span class="exch-logo"><img src="/assets/img/pages/exchanges/swapspace.png" alt="SwapSpace"></span>
       <span class="exch-name-block">
@@ -180,7 +240,6 @@ permalink: /buy-ravencoin/
       </span>
     </a>
 
-    <!-- Swapzone -->
     <a class="exch-card" href="https://swapzone.io/" target="_blank" rel="noopener nofollow">
       <span class="exch-logo"><img src="/assets/img/pages/exchanges/swapzone.png" alt="Swapzone"></span>
       <span class="exch-name-block">
@@ -192,7 +251,6 @@ permalink: /buy-ravencoin/
 
   <h1>Top Global Exchanges (KYC Verified Spot Volume)</h1>
   <div class="exch-grid">
-    <!-- Binance -->
     <a class="exch-card" href="https://www.binance.com/" target="_blank" rel="noopener nofollow">
       <span class="exch-logo"><img src="/assets/img/pages/exchanges/binance.png" alt="Binance"></span>
       <span class="exch-name-block">
@@ -201,7 +259,6 @@ permalink: /buy-ravencoin/
       </span>
     </a>
 
-    <!-- Upbit -->
     <a class="exch-card" href="https://upbit.com/" target="_blank" rel="noopener nofollow">
       <span class="exch-logo"><img src="/assets/img/pages/exchanges/upbit.png" alt="Upbit"></span>
       <span class="exch-name-block">
@@ -210,7 +267,6 @@ permalink: /buy-ravencoin/
       </span>
     </a>
 
-    <!-- Bybit -->
     <a class="exch-card" href="https://www.bybit.com/" target="_blank" rel="noopener nofollow">
       <span class="exch-logo"><img src="/assets/img/pages/exchanges/bybit.png" alt="Bybit"></span>
       <span class="exch-name-block">
@@ -219,7 +275,6 @@ permalink: /buy-ravencoin/
       </span>
     </a>
 
-    <!-- OKX -->
     <a class="exch-card" href="https://www.okx.com/" target="_blank" rel="noopener nofollow">
       <span class="exch-logo"><img src="/assets/img/pages/exchanges/okx.png" alt="OKX"></span>
       <span class="exch-name-block">
@@ -228,7 +283,6 @@ permalink: /buy-ravencoin/
       </span>
     </a>
 
-    <!-- HTX -->
     <a class="exch-card" href="https://www.htx.com/" target="_blank" rel="noopener nofollow">
       <span class="exch-logo"><img src="/assets/img/pages/exchanges/htx.png" alt="HTX"></span>
       <span class="exch-name-block">
@@ -237,7 +291,6 @@ permalink: /buy-ravencoin/
       </span>
     </a>
 
-    <!-- Kraken -->
     <a class="exch-card" href="https://www.kraken.com/" target="_blank" rel="noopener nofollow">
       <span class="exch-logo"><img src="/assets/img/pages/exchanges/kraken.png" alt="Kraken"></span>
       <span class="exch-name-block">
@@ -246,7 +299,6 @@ permalink: /buy-ravencoin/
       </span>
     </a>
 
-    <!-- KuCoin -->
     <a class="exch-card" href="https://www.kucoin.com/" target="_blank" rel="noopener nofollow">
       <span class="exch-logo"><img src="/assets/img/pages/exchanges/kucoin.png" alt="KuCoin"></span>
       <span class="exch-name-block">
@@ -255,7 +307,6 @@ permalink: /buy-ravencoin/
       </span>
     </a>
 
-    <!-- Crypto.com -->
     <a class="exch-card" href="https://crypto.com/" target="_blank" rel="noopener nofollow">
       <span class="exch-logo"><img src="/assets/img/pages/exchanges/crypto.png" alt="Crypto.com"></span>
       <span class="exch-name-block">
@@ -264,7 +315,6 @@ permalink: /buy-ravencoin/
       </span>
     </a>
 
-    <!-- Gate.io -->
     <a class="exch-card" href="https://www.gate.io/" target="_blank" rel="noopener nofollow">
       <span class="exch-logo"><img src="/assets/img/pages/exchanges/gateio.png" alt="Gate.io"></span>
       <span class="exch-name-block">
@@ -273,7 +323,6 @@ permalink: /buy-ravencoin/
       </span>
     </a>
 
-    <!-- MEXC -->
     <a class="exch-card" href="https://www.mexc.com/" target="_blank" rel="noopener nofollow">
       <span class="exch-logo"><img src="/assets/img/pages/exchanges/mexc.png" alt="MEXC"></span>
       <span class="exch-name-block">
@@ -282,7 +331,6 @@ permalink: /buy-ravencoin/
       </span>
     </a>
 
-    <!-- Bitget -->
     <a class="exch-card" href="https://www.bitget.com/" target="_blank" rel="noopener nofollow">
       <span class="exch-logo"><img src="/assets/img/pages/exchanges/bitget.png" alt="Bitget"></span>
       <span class="exch-name-block">
@@ -291,7 +339,6 @@ permalink: /buy-ravencoin/
       </span>
     </a>
 
-    <!-- CoinEx -->
     <a class="exch-card" href="https://www.coinex.com/" target="_blank" rel="noopener nofollow">
       <span class="exch-logo"><img src="/assets/img/pages/exchanges/coinex.png" alt="CoinEx"></span>
       <span class="exch-name-block">
@@ -300,7 +347,6 @@ permalink: /buy-ravencoin/
       </span>
     </a>
 
-    <!-- BingX -->
     <a class="exch-card" href="https://bingx.com/" target="_blank" rel="noopener nofollow">
       <span class="exch-logo"><img src="/assets/img/pages/exchanges/bingx.png" alt="BingX"></span>
       <span class="exch-name-block">
@@ -309,7 +355,6 @@ permalink: /buy-ravencoin/
       </span>
     </a>
 
-    <!-- LBank -->
     <a class="exch-card" href="https://www.lbank.com/" target="_blank" rel="noopener nofollow">
       <span class="exch-logo"><img src="/assets/img/pages/exchanges/lbank.png" alt="LBank"></span>
       <span class="exch-name-block">
@@ -318,7 +363,6 @@ permalink: /buy-ravencoin/
       </span>
     </a>
 
-    <!-- DigiFinex -->
     <a class="exch-card" href="https://www.digifinex.com/" target="_blank" rel="noopener nofollow">
       <span class="exch-logo"><img src="/assets/img/pages/exchanges/digifinex.png" alt="DigiFinex"></span>
       <span class="exch-name-block">
@@ -327,7 +371,6 @@ permalink: /buy-ravencoin/
       </span>
     </a>
 
-    <!-- Bitvavo -->
     <a class="exch-card" href="https://bitvavo.com/" target="_blank" rel="noopener nofollow">
       <span class="exch-logo"><img src="/assets/img/pages/exchanges/bitvavo.png" alt="Bitvavo"></span>
       <span class="exch-name-block">
@@ -336,7 +379,6 @@ permalink: /buy-ravencoin/
       </span>
     </a>
 
-    <!-- WhiteBIT -->
     <a class="exch-card" href="https://whitebit.com/" target="_blank" rel="noopener nofollow">
       <span class="exch-logo"><img src="/assets/img/pages/exchanges/whitebit.png" alt="WhiteBIT"></span>
       <span class="exch-name-block">
@@ -345,7 +387,6 @@ permalink: /buy-ravencoin/
       </span>
     </a>
 
-    <!-- XT.COM -->
     <a class="exch-card" href="https://www.xt.com/" target="_blank" rel="noopener nofollow">
       <span class="exch-logo"><img src="/assets/img/pages/exchanges/xtcom.png" alt="XT.COM"></span>
       <span class="exch-name-block">
@@ -354,7 +395,6 @@ permalink: /buy-ravencoin/
       </span>
     </a>
 
-    <!-- Phemex -->
     <a class="exch-card" href="https://phemex.com/" target="_blank" rel="noopener nofollow">
       <span class="exch-logo"><img src="/assets/img/pages/exchanges/phemex.png" alt="Phemex"></span>
       <span class="exch-name-block">
@@ -363,7 +403,6 @@ permalink: /buy-ravencoin/
       </span>
     </a>
 
-    <!-- ProBit Global -->
     <a class="exch-card" href="https://www.probit.com/" target="_blank" rel="noopener nofollow">
       <span class="exch-logo"><img src="/assets/img/pages/exchanges/probit.png" alt="ProBit Global"></span>
       <span class="exch-name-block">
