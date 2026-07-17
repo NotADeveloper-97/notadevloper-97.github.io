@@ -702,6 +702,14 @@ modalCacheRef: "4.7.0"
     ul.nav-tabs.rvn-tablist { border-radius: 16px; padding: 12px; }
     ul.nav-tabs.rvn-tablist li a { padding: 8px 16px; }
     .cmc-name { max-width: 140px; }
+
+    .rvn-compare li { flex-direction: column; align-items: flex-start; gap: 6px; }
+    .rvn-compare .value {
+      white-space: normal !important;
+      word-break: break-word !important;
+      max-width: 100% !important;
+      display: inline-block !important;
+    }
   }
 
   @media (max-width: 480px) {
@@ -730,6 +738,12 @@ modalCacheRef: "4.7.0"
 
     .rvn-why-title { font-size: 26px; }
     .rvn-compare li { flex-direction: column; align-items: flex-start; gap: 6px; }
+    .rvn-compare .value {
+      white-space: normal !important;
+      word-break: break-word !important;
+      max-width: 100% !important;
+      display: inline-block !important;
+    }
 
     .rvn-cta { padding: 56px 0; }
     .rvn-cta-inner { flex-direction: column; text-align: center; }

@@ -69,8 +69,30 @@
     align-items: center;
   }
 
-  /* Premium Responsive Overrides Layout Settings on Mobile Displays */
-  @media (max-width: 768px) {
+  /* Compact desktop tier: enough room to stay a single row, but 10 nav
+     items + logo + translate widget need tighter spacing than the
+     roomy >1440px layout to avoid crowding/overflow on laptop widths. */
+  @media (min-width: 1025px) and (max-width: 1439px) {
+    .rvn-menu-links-box {
+      gap: 10px !important;
+    }
+    .rvn-nav-link {
+      font-size: 14px !important;
+      padding: 8px 2px !important;
+    }
+    .rvn-translate-wrapper-mobile {
+      margin-left: 6px !important;
+    }
+    .rvn-header-wrapper {
+      padding: 0 16px !important;
+    }
+  }
+
+  /* Premium Responsive Overrides Layout Settings on Mobile & Tablet/Laptop Displays
+     (raised from 768px to 1024px — a 10-item nav + logo + translate widget
+     doesn't fit a single row below laptop widths, so the drawer needs to
+     kick in earlier than just phones) */
+  @media (max-width: 1024px) {
     .rvn-header-nav {
       padding: 10px 0 !important;
     }
