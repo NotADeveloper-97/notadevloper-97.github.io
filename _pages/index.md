@@ -703,6 +703,45 @@ modalCacheRef: "4.7.0"
     ul.nav-tabs.rvn-tablist li a { padding: 8px 16px; }
     .cmc-name { max-width: 140px; }
   }
+
+  @media (max-width: 480px) {
+    .rvn-hero { padding: 96px 0 56px; }
+    .rvn-hero h1 { font-size: 30px; }
+    .rvn-hero p.lede { font-size: 15px; }
+    .rvn-eyebrow { font-size: 10px; padding: 6px 12px; }
+
+    .rvn-hero-buttons { flex-direction: column; align-items: stretch; gap: 12px; }
+    .rvn-btn { width: 100%; justify-content: center; }
+    .video-icon { width: 100%; }
+    .rvn-video-icon { width: 100%; justify-content: center; }
+
+    .rvn-links-row { flex-direction: column; gap: 14px; margin-top: 40px; padding-top: 24px; }
+
+    .rvn-ledger .wrap { grid-template-columns: 1fr; }
+    .rvn-ledger-cell { border-right: none !important; border-bottom: 1px solid var(--border-dark); }
+    .rvn-ledger-cell:last-child { border-bottom: none; }
+
+    .rvn-section { padding: 64px 0; }
+    .rvn-section-head h2 { font-size: 26px; }
+
+    .rvn-tab-card { padding: 24px; gap: 24px; }
+    .rvn-tab-icon { flex-basis: 100%; }
+    .rvn-tab-icon img { max-width: 90px; }
+
+    .rvn-why-title { font-size: 26px; }
+    .rvn-compare li { flex-direction: column; align-items: flex-start; gap: 6px; }
+
+    .rvn-cta { padding: 56px 0; }
+    .rvn-cta-inner { flex-direction: column; text-align: center; }
+    .rvn-cta .rvn-btn { width: 100%; justify-content: center; }
+
+    .exch-grid { grid-template-columns: 1fr; }
+
+    .rvn-social { padding: 64px 0; }
+    .rvn-social-row { flex-direction: column; align-items: center; }
+    .rvn-social-row iframe,
+    .rvn-social-row .twitter-timeline { width: 100% !important; max-width: 360px; }
+  }
 </style>
 
 <div class="rvn-home">

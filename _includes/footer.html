@@ -1,103 +1,70 @@
-<footer class="site-footer pt-16" style="background: #090B11; border-top: 1px solid rgba(255, 255, 255, 0.08); color: #94A3B8; font-family: system-ui, -apple-system, sans-serif;">
-  <data class="u-url" href="{{ " / " | relative_url }}"></data>
-
-  <div class="footer-upper pb-4">
-    <div class="wrapper pb-8 flex flex-wrap justify-between text-center" style="max-width: 1200px; margin: 0 auto; padding-left: 24px; padding-right: 24px; border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
-      <div class="w-full sm:w-1/2 md:w-1/2 sm:text-left md:text-left">
-        <a class="inline-block mb-4 text-white text-2xl" href="/">
-          <img style="height: 45px; width: auto; object-fit: contain; display: block;" src="/assets/img/media/logo-wide-sm-white.png" alt="footer logo" />
+<footer class="rvn-custom-footer" style="background: #090B11 !important; border-top: 1px solid rgba(255, 255, 255, 0.08) !important; color: #94A3B8 !important; font-family: system-ui, -apple-system, sans-serif !important; padding-top: 48px !important; padding-bottom: 32px !important; width: 100% !important; clear: both !important; display: block !important; box-sizing: border-box !important;">
+  <div class="rvn-footer-upper" style="max-width: 1200px; margin: 0 auto; padding: 0 24px 24px; box-sizing: border-box !important;">
+    
+    <!-- Unified Layout Grid Architecture -->
+    <div class="rvn-foot-links-grid">
+      
+      <!-- Brand Logo Column Layer -->
+      <div class="rvn-foot-logo-col">
+        <a class="inline-block" href="/" style="display: block !important;">
+          <img style="height: 42px !important; width: auto !important; object-fit: contain !important; display: block !important;" src="/assets/img/media/logo-wide-sm-white.png" alt="footer logo" />
         </a>
-        </div>
-      <div class="w-full sm:w-1/2 md:w-1/2 text-left">
-        <div class="flex flex-wrap">
-          <div class="w-1/3 sm:w-1/3 md:w-1/3 mb-8">
-            <h5 class="text-sm font-semibold uppercase footer-heading">Navigation</h5>
-            <ul class="list-reset footer-links-list">
-              <li>
-                <a href="/">Home</a>
-              </li>
-              <li>
-                <a href="/about/">About</a>
-              </li>
-              <li>
-                <a href="/wallet/">Wallet</a>
-              </li>
-              <li>
-                <a href="/buy-ravencoin/">How to Buy</a>
-              </li>
-              <li>
-                <a href="/whitepaper/">White Paper</a>
-              </li>
-            </ul>
-          </div>
-          <div class="w-1/3 sm:w-1/3 md:w-1/3 mb-8">
-            <h5 class="text-sm font-semibold uppercase footer-heading">Developers</h5>
-            <ul class="list-reset footer-links-list">
-              <li>
-                <a href="https://rvn.cryptoscope.io/" target="_blank" rel="nofollow">Block Explorer</a>
-              </li>
-              <li>
-                <a href="https://rvn.tokenview.io/" target="_blank" rel="nofollow">Block Explorer 2</a>
-              </li> 
-              <li>
-                <a href="https://www.assetsexplorer.com/" target="_blank" rel="nofollow">Asset Explorer 1</a>
-              </li>
-              <li>
-                <a href="https://ravencoin.asset-explorer.net/" target="_blank" rel="nofollow">Asset Explorer 2</a>
-              </li>
-              <li>
-                <a href="/halving">Halving</a>
-              </li>
-              <li>
-                <a href="http://www.ravennodes.com/" target="_blank" rel="nofollow">Node Map</a>
-              </li>
-              <li>
-                <a href="https://github.com/RavenProject/Ravencoin" target="_blank" rel="nofollow">Github</a>
-              </li>
-              <li>
-                <a href="/pools/">Mining Pools</a>
-              </li>
-            </ul>
-          </div>
-          <div class="w-1/3 sm:w-1/3 md:w-1/3 mb-8">
-            <h5 class="text-sm font-semibold uppercase footer-heading">Community</h5>
-            <ul class="list-reset footer-links-list">
-              <li>
-                <a href="https://www.ravencoinmeetup.org/" target="_blank" rel="nofollow">Ravencoin Meetups</a>
-              </li>
-              <li>
-                <a href="https://bitcointalk.org/index.php?topic=3238497" target="_blank" rel="nofollow">Bitcoin Talk</a>
-              </li>
-              <li>
-                <a href="https://discordapp.com/invite/jn6uhur" target="_blank" rel="nofollow">Discord</a>
-              </li>
-              <li>
-                <a href="https://t.me/RavencoinDev" target="_blank" rel="nofollow">Telegram</a>
-              </li>
-              <li>
-                <a href="https://www.reddit.com/r/Ravencoin/" target="_blank" rel="nofollow">Reddit</a>
-              </li>
-              <li>
-                <a href="https://medium.com/@ravencoin" target="_blank" rel="nofollow">Medium</a>
-              </li>
-              <li>
-                <a href="https://www.facebook.com/groups/RavenCoinNest" target="_blank" rel="nofollow">Facebook</a>
-              </li>
-            </ul>
-          </div>
-        </div>
       </div>
+
+      <!-- Column A: Core Navigation Links Matrix -->
+      <div class="rvn-foot-col">
+        <h5 class="rvn-foot-heading">Navigation</h5>
+        <ul class="rvn-foot-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/wallet/">Wallet</a></li>
+          <li><a href="/buy-ravencoin/">How to Buy</a></li>
+          <li><a href="/whitepaper/">White Paper</a></li>
+        </ul>
+      </div>
+
+      <!-- Column B: Technical Infrastructure Utilities -->
+      <div class="rvn-foot-col">
+        <h5 class="rvn-foot-heading">Developers</h5>
+        <ul class="rvn-foot-list">
+          <li><a href="https://rvn.cryptoscope.io/" target="_blank" rel="nofollow">Block Explorer</a></li>
+          <li><a href="https://rvn.tokenview.io/" target="_blank" rel="nofollow">Block Explorer 2</a></li> 
+          <li><a href="https://www.assetsexplorer.com/" target="_blank" rel="nofollow">Asset Explorer 1</a></li>
+          <li><a href="https://ravencoin.asset-explorer.net/" target="_blank" rel="nofollow">Asset Explorer 2</a></li>
+          <li><a href="/halving">Halving</a></li>
+          <li><a href="http://www.ravennodes.com/" target="_blank" rel="nofollow">Node Map</a></li>
+          <li><a href="https://github.com/RavenProject/Ravencoin" target="_blank" rel="nofollow">Github</a></li>
+          <li><a href="/pools/">Mining Pools</a></li>
+        </ul>
+      </div>
+
+      <!-- Column C: Global Ecosystem Guild Networks -->
+      <div class="rvn-foot-col rvn-foot-col-full">
+        <h5 class="rvn-foot-heading">Community</h5>
+        <ul class="rvn-foot-list rvn-community-split-list">
+          <li><a href="https://www.ravencoinmeetup.org/" target="_blank" rel="nofollow">Meetups</a></li>
+          <li><a href="https://bitcointalk.org/index.php?topic=3238497" target="_blank" rel="nofollow">Bitcoin Talk</a></li>
+          <li><a href="https://discordapp.com/invite/jn6uhur" target="_blank" rel="nofollow">Discord</a></li>
+          <li><a href="https://t.me/RavencoinDev" target="_blank" rel="nofollow">Telegram</a></li>
+          <li><a href="https://www.reddit.com/r/Ravencoin/" target="_blank" rel="nofollow">Reddit</a></li>
+          <li><a href="https://medium.com/@ravencoin" target="_blank" rel="nofollow">Medium</a></li>
+          <li><a href="https://www.facebook.com/groups/RavenCoinNest" target="_blank" rel="nofollow">Facebook</a></li>
+        </ul>
+      </div>
+
     </div>
   </div>
 
-  <div class="footer-bottom mb-4" style="padding-top: 24px; padding-bottom: 24px;">
-    <div class="wrapper flex flex-wrap justify-between text-center" style="max-width: 1200px; margin: 0 auto; padding-left: 24px; padding-right: 24px;">
-      <div class="footer-left w-full sm:w-1/2 sm:text-left">
-        <div class="footerlicense" style="font-size: 13px; color: #64748B;">© Ravencoin {{ site.time | date: '%Y' }} {{ site.name | default: site.title }} Released under the
-          <a class="license-link" href="http://opensource.org/licenses/mit-license.php" target="_blank">MIT license</a><span class="ml-2">/</span><span class="ml-2"><a class="license-link" href="/attribution/">Attributions</a></span>
-        </div>
+  <!-- Copyright Framework Legal Layer Footer Row -->
+  <div class="rvn-footer-bottom" style="max-width: 1200px; margin: 0 auto; padding: 24px 24px 0; border-top: 1px solid rgba(255, 255, 255, 0.08) !important; box-sizing: border-box !important;">
+    <div class="rvn-foot-bottom-inner">
+      <div class="rvn-foot-copy" style="font-size: 12px; color: #64748B !important; line-height: 1.5;">
+        © Ravencoin {{ site.time | date: '%Y' }} Released under the
+        <a href="http://opensource.org/licenses/mit-license.php" target="_blank" style="color: #94A3B8 !important; text-decoration: none;">MIT license</a>
+        <span style="margin: 0 4px; color: #64748B;">/</span>
+        <a href="/attribution/" style="color: #94A3B8 !important; text-decoration: none;">Attributions</a>
       </div>
-      <div class="footer-right w-full sm:w-1/2 flex mt-4 sm:mt-0 m-auto justify-center sm:justify-end">
+      <div class="rvn-foot-social">
         {%- include social.html -%}
       </div>
     </div>
@@ -106,45 +73,120 @@
 {%- include modal.html -%}
 
 <style>
-  /* Premium Footer Typography & Layout Tweaks */
-  .footer-heading {
-    color: #FFFFFF !important;
-    letter-spacing: 0.05em;
-    margin-bottom: 16px;
-    font-size: 13px;
+  /* Standard Desktop Layout Architecture Definitions */
+  .rvn-foot-links-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 40px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
   }
   
-  .footer-links-list {
-    padding: 0;
-    margin: 0;
-    list-style: none;
+  .rvn-foot-logo-col {
+    grid-column: span 3 !important;
+    margin-bottom: 24px !important;
+    display: flex !important;
+    justify-content: flex-start !important;
   }
-  
-  .footer-links-list li {
-    margin-bottom: 10px;
-  }
-  
-  .footer-links-list li a {
+
+  .rvn-custom-footer a, 
+  .rvn-custom-footer a:visited {
     color: #94A3B8 !important;
     text-decoration: none !important;
-    font-size: 14px;
-    transition: color 0.15s ease, padding-left 0.15s ease;
-    display: inline-block;
+    font-size: 14px !important;
+    transition: color 0.15s ease !important;
+    display: inline-block !important;
   }
-  
-  /* Link hover micro-interactions */
-  .footer-links-list li a:hover {
+  .rvn-custom-footer a:hover {
     color: #FF5A1F !important;
-    padding-left: 2px;
   }
-  
-  .license-link {
-    color: #94A3B8 !important;
-    text-decoration: none;
-    transition: color 0.15s ease;
-  }
-  
-  .license-link:hover {
+  .rvn-foot-heading {
     color: #FFFFFF !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.06em !important;
+    margin: 0 0 16px 0 !important;
+    padding: 0 !important;
+  }
+  .rvn-foot-list {
+    padding: 0 !important;
+    margin: 0 !important;
+    list-style: none !important;
+  }
+  .rvn-foot-list li {
+    margin-bottom: 12px !important;
+    padding: 0 !important;
+  }
+  .rvn-community-split-list {
+    display: block !important;
+  }
+
+  /* Copyright / social row: side-by-side on desktop, stacked+centered on mobile */
+  .rvn-foot-bottom-inner {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 16px !important;
+    width: 100% !important;
+    text-align: left !important;
+    padding-bottom: 24px !important;
+  }
+
+  /* Responsive Adjustments Targeting Mobile Viewports */
+  @media (max-width: 768px) {
+    .rvn-footer-upper, .rvn-footer-bottom {
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+    }
+    
+    .rvn-foot-links-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 32px 24px !important;
+    }
+    
+    .rvn-foot-logo-col {
+      grid-column: span 2 !important;
+      margin-bottom: 8px !important;
+      justify-content: flex-start !important;
+    }
+    
+    /* Adds matching line dividers above both primary column groupings on mobile */
+    .rvn-foot-links-grid .rvn-foot-col:nth-child(2),
+    .rvn-foot-links-grid .rvn-foot-col:nth-child(3) {
+      border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+      padding-top: 16px !important;
+    }
+    
+    .rvn-foot-col-full {
+      grid-column: span 2 !important;
+      margin-top: 12px !important;
+      border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+      padding-top: 16px !important;
+    }
+
+    .rvn-foot-col-full .rvn-foot-heading {
+      text-align: left !important;
+      width: 100% !important;
+      margin-bottom: 16px !important;
+    }
+
+    .rvn-community-split-list {
+      display: grid !important;
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 12px 24px !important;
+    }
+    
+    .rvn-community-split-list li {
+      margin-bottom: 0 !important;
+    }
+
+    .rvn-foot-bottom-inner {
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-align: center !important;
+    }
   }
 </style>

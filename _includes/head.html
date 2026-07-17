@@ -16,7 +16,6 @@
   {% include scripts.html %}
   
   <style>
-    /* Global design override configuration blocks */
     body {
       font-family: 'Inter', -apple-system, sans-serif;
       background-color: #F8F9FA;
@@ -27,33 +26,19 @@
       letter-spacing: -0.02em;
     }
 
-    /* ---------- Layout Protection Rules ---------- */
-    .site-title, .site-title img {
-      flex-shrink: 0 !important; /* Absolutely prevents logo from being crushed or hidden */
-    }
-
-    .page-link {
-      white-space: nowrap !important; /* Prevents text elements from breaking onto multiple lines */
-    }
-    
-    .trigger {
-      flex-wrap: nowrap !important; /* Locks all menu links in a rigid, clean row grid */
-    }
-
     /* ===================================================
        Premium Web3 Reskin for Google Translate Widget
-       (Scaled down & optimized for absolute inline alignment)
     =================================================== */
     .goog-te-gadget-simple {
       background-color: rgba(255, 255, 255, 0.03) !important;
       border: 1px solid rgba(255, 255, 255, 0.08) !important;
-      padding: 4px 10px !important; /* Smaller, compact inner padding padding */
-      border-radius: 6px !important; /* Matches modern clean design system layout borders */
+      padding: 4px 10px !important;
+      border-radius: 6px !important;
       cursor: pointer !important;
       font-family: 'Inter', sans-serif !important;
       display: inline-flex !important;
       align-items: center !important;
-      height: 28px !important; /* Explicit smaller fixed height to line up with link baselines */
+      height: 28px !important;
       box-sizing: border-box !important;
       vertical-align: middle !important;
       white-space: nowrap !important;
@@ -68,8 +53,8 @@
 
     .goog-te-gadget-simple span, 
     .goog-te-menu-value span {
-      color: #94A3B8 !important; /* Inherits navigation dark slate link hue color */
-      font-size: 11px !important; /* Compact, smaller typography alignment */
+      color: #94A3B8 !important;
+      font-size: 11px !important;
       font-weight: 600 !important;
       text-transform: uppercase;
       letter-spacing: 0.04em;
@@ -104,6 +89,141 @@
     
     body {
       top: 0px !important;
+    }
+
+    /* ==========================================================================
+       Unified Web3 Mobile UI Patch System (Viewports <= 768px)
+       ========================================================================== */
+    @media (max-width: 768px) {
+      .rvn-about-container,
+      .rvn-asset-doc,
+      .rvn-attr-container,
+      .rvn-comm-wrap,
+      .rvn-dev-container,
+      .rvn-halving-page,
+      .rvn-ledger-container,
+      .rvn-pool-container {
+        padding: 32px 16px !important;
+      }
+
+      h2 { font-size: 26px !important; }
+      h3 { font-size: 20px !important; }
+      
+      /* Table to Responsive Card Layout (Assets Page Matrix) */
+      .rvn-matrix {
+        border: none !important;
+        background: transparent !important;
+        box-shadow: none !important;
+      }
+      .rvn-matrix thead {
+        display: none !important;
+      }
+      .rvn-matrix tbody, .rvn-matrix tr, .rvn-matrix td {
+        display: block !important;
+        width: 100% !important;
+      }
+      .rvn-matrix tr {
+        background: #FFFFFF;
+        border: 1px solid rgba(17, 24, 39, 0.08) !important;
+        border-radius: 12px;
+        margin-bottom: 16px;
+        padding: 8px 0;
+        box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.02);
+      }
+      .rvn-matrix td {
+        padding: 10px 16px !important;
+        border: none !important;
+        box-sizing: border-box;
+        display: flex !important;
+        flex-direction: column;
+      }
+      .rvn-matrix td:first-child {
+        background: transparent !important;
+        font-size: 11px !important;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: #64748B !important;
+        padding-bottom: 2px !important;
+      }
+      .rvn-matrix td:last-child {
+        font-size: 14px !important;
+        word-break: break-all !important;
+      }
+
+      /* Core Layout Name-Block Word Wrap Refinement */
+      .exch-name-block, .comm-meta-block, .pool-meta-block {
+        min-width: 0;
+        flex: 1;
+      }
+      .exch-name, .comm-name, .pool-name {
+        white-space: normal !important;
+        word-break: break-word;
+      }
+
+      /* Component Grid & Structural Alignment Resets */
+      .rvn-tab-card {
+        padding: 24px !important;
+        flex-direction: column !important;
+        text-align: center;
+      }
+      .rvn-tab-icon {
+        flex: 0 0 auto !important;
+        margin: 0 auto;
+      }
+      .rvn-tab-body ul {
+        grid-template-columns: 1fr !important;
+        text-align: left;
+      }
+      .rvn-why-grid {
+        grid-template-columns: 1fr !important;
+        gap: 32px !important;
+      }
+      .rvn-why-art {
+        order: -1 !important;
+      }
+      .rvn-compare li {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 8px !important;
+      }
+      .rvn-compare .value {
+        align-self: flex-start;
+      }
+      .rvn-cta-inner {
+        flex-direction: column !important;
+        text-align: center;
+        gap: 20px !important;
+      }
+      .rvn-cta-inner br {
+        display: none !important;
+      }
+      .rvn-blockquote {
+        padding: 16px !important;
+        margin: 20px 0 !important;
+      }
+      .rvn-blockquote p {
+        font-size: 16px !important;
+      }
+      .rvn-timeline-box li {
+        flex-direction: column !important;
+        gap: 4px;
+        padding: 12px 0 !important;
+      }
+
+      /* Notification Dialog Viewport Fixes */
+      div[id^="upgrade-notification"] {
+        padding: 16px !important;
+        align-items: flex-end !important;
+      }
+      .modal-notification {
+        padding: 28px 20px 24px !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+      }
+      #closeButton {
+        top: 12px !important;
+        right: 12px !important;
+      }
     }
   </style>
 

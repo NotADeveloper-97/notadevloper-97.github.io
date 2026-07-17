@@ -1,47 +1,208 @@
-<header class="site-header" role="banner" style="background: #090B11; position: sticky; top: 0; z-index: 40; border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+<header class="rvn-main-header" role="banner" style="background: #090B11 !important; position: sticky; top: 0; z-index: 2000; border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;">
   {% include top-bar.html %}
-  <div class="header-nav" style="padding: 12px 0;">
-    <div class="wrapper" style="display: flex; justify-content: flex-start; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 24px; gap: 32px;">
-      {%- assign default_paths = site.pages | map: "path" -%} 
-      {%- assign page_paths = site.header_pages | default: default_paths -%}
+  <div class="rvn-header-nav" style="padding: 14px 0 !important; background: #090B11 !important; position: relative; z-index: 2002;">
+    <div class="rvn-header-wrapper" style="display: flex !important; justify-content: space-between !important; align-items: center !important; max-width: 1200px; margin: 0 auto; padding: 0 24px; box-sizing: border-box !important;">
       
-      <a class="site-title" rel="author" href="{{ "/" | relative_url }}" style="display: flex; align-items: center;">
-        <img style="height: 70px; width: auto; object-fit: contain; display: block;" src="/assets/img/media/favicon.png" alt="logo" />
+      <!-- Brand Logo -->
+      <a class="rvn-header-logo" rel="author" href="{{ '/' | relative_url }}" style="display: flex !important; align-items: center !important; flex-shrink: 0 !important; position: relative; z-index: 2005;">
+        <img style="height: 44px !important; width: auto !important; object-fit: contain !important; display: block !important;" src="/assets/img/media/favicon.png" alt="logo" />
       </a>
 
-      {%- if page_paths -%}
-      <nav class="site-nav">
-        <input type="checkbox" id="nav-trigger" class="nav-trigger" style="display: none;" />
-        <label for="nav-trigger" style="display: none;">
-          <span class="menu-icon">
-            <svg viewBox="0 0 18 15" width="18px" height="15px" fill="#FFFFFF">
-              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,12.695,18,13.516L18,13.516z"/>
-            </svg>
+      <!-- Navigation Container -->
+      <nav class="rvn-mobile-nav-container" style="display: flex !important; align-items: center !important;">
+        <input type="checkbox" id="rvn-menu-trigger" class="rvn-menu-checkbox" style="position: absolute !important; opacity: 0 !important; pointer-events: none !important; width: 0 !important; height: 0 !important; margin: 0 !important;" />
+        
+        <label for="rvn-menu-trigger" class="rvn-menu-toggle-btn" aria-label="Toggle navigation menu" style="display: none; cursor: pointer !important; align-items: center !important; justify-content: center !important; width: 44px !important; height: 44px !important; border-radius: 10px !important; background: rgba(255, 255, 255, 0.04) !important; border: 1px solid rgba(255, 255, 255, 0.12) !important; position: relative; z-index: 2005; transition: all 0.2s ease;">
+          <span class="rvn-hamburger-icon" style="display: flex !important; width: 20px; height: 16px; position: relative; flex-direction: column; justify-content: space-between;">
+            <span class="line line-1" style="display: block; width: 100%; height: 2px; background: #FFFFFF; border-radius: 2px; transition: transform 0.25s ease, top 0.25s ease;"></span>
+            <span class="line line-2" style="display: block; width: 100%; height: 2px; background: #FFFFFF; border-radius: 2px; transition: opacity 0.2s ease;"></span>
+            <span class="line line-3" style="display: block; width: 100%; height: 2px; background: #FFFFFF; border-radius: 2px; transition: transform 0.25s ease, top 0.25s ease;"></span>
           </span>
         </label>
 
-        <div class="trigger" style="display: flex; gap: 12px; align-items: center;">
+        <div class="rvn-menu-links-box">
+          {%- assign default_paths = site.pages | map: 'path' -%} 
+          {%- assign page_paths = site.header_pages | default: default_paths -%}
           {%- for path in page_paths -%} 
-            {%- assign my_page = site.pages | where: "path", path | first -%} 
+            {%- assign my_page = site.pages | where: 'path', path | first -%} 
             {%- if my_page.title -%}
-              <a class="page-link" href="{{ my_page.url | relative_url }}" style="color: #94A3B8; font-size: 14px; font-weight: 600; text-decoration: none; transition: color 0.15s ease; padding: 6px 0; border-bottom: 2px solid transparent;">
+              <a class="rvn-nav-link" href="{{ my_page.url | relative_url }}" style="color: #CBD5E1 !important; font-size: 17px !important; font-weight: 500 !important; font-family: 'Space Grotesk', sans-serif !important; text-decoration: none !important; transition: all 0.2s ease !important; box-sizing: border-box !important;">
                 {{ my_page.title | escape }}
               </a>
             {%- endif -%} 
           {%- endfor -%}
-
-          <div id="google_translate_element" style="margin-left: 8px; display: inline-flex; align-items: center;"></div>
+          
+          <!-- Unified structural container for the translate widget wrapper -->
+          <div class="rvn-translate-wrapper-mobile">
+            <div id="google_translate_element"></div>
+          </div>
         </div>
       </nav>
-      {%- endif -%}
+
     </div>
   </div>
 </header>
 
 <style>
-  /* Navigation Hover Micro-animations */
-  .page-link:hover {
+  /* Desktop Framework Layout Specifications */
+  .rvn-menu-links-box {
+    display: flex !important;
+    gap: 20px !important;
+    align-items: center !important;
+  }
+  
+  .rvn-nav-link {
+    padding: 8px 2px !important;
+    white-space: nowrap !important;
+    border-bottom: 2px solid transparent !important;
+    width: auto !important;
+  }
+
+  .rvn-nav-link:hover {
     color: #FFFFFF !important;
     border-bottom-color: #FF5A1F !important;
+  }
+  
+  .rvn-translate-wrapper-mobile {
+    margin-left: 12px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  /* Premium Responsive Overrides Layout Settings on Mobile Displays */
+  @media (max-width: 768px) {
+    .rvn-header-nav {
+      padding: 10px 0 !important;
+    }
+    .rvn-header-wrapper {
+      padding: 0 16px !important;
+    }
+    .rvn-header-logo img {
+      height: 36px !important;
+    }
+    .rvn-menu-toggle-btn {
+      display: flex !important;
+    }
+    
+    /* Full screen fluid responsive links menu box drawer overlay */
+    .rvn-menu-links-box {
+      display: none !important; 
+      position: fixed !important;
+      inset: 0 !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100vw !important;
+      height: 100vh !important;
+      height: 100dvh !important;
+      background: radial-gradient(circle at 80% 0%, #161B2B 0%, #090B11 70%) !important;
+      flex-direction: column !important;
+      align-items: stretch !important;
+      justify-content: flex-start !important;
+      gap: 0 !important;
+      padding: 108px 24px 40px !important;
+      z-index: 1999 !important;
+      overflow-y: auto !important;
+      box-sizing: border-box !important;
+    }
+    
+    .rvn-menu-checkbox:checked ~ .rvn-menu-links-box {
+      display: flex !important;
+    }
+    
+    .rvn-menu-checkbox:checked ~ .rvn-menu-toggle-btn {
+      background: rgba(255, 90, 31, 0.12) !important;
+      border-color: rgba(255, 90, 31, 0.3) !important;
+    }
+    .rvn-menu-checkbox:checked ~ .rvn-menu-toggle-btn .line-1 {
+      transform: translateY(7px) rotate(45deg);
+    }
+    .rvn-menu-checkbox:checked ~ .rvn-menu-toggle-btn .line-2 {
+      opacity: 0 !important;
+    }
+    .rvn-menu-checkbox:checked ~ .rvn-menu-toggle-btn .line-3 {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .rvn-nav-link {
+      width: 100% !important;
+      padding: 16px 12px !important;
+      white-space: normal !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important;
+    }
+
+    .rvn-nav-link:active,
+    .rvn-nav-link:hover {
+      background: rgba(255, 255, 255, 0.03) !important;
+      color: #FF5A1F !important;
+      padding-left: 18px !important;
+    }
+    
+    /* ==========================================================================
+       Google Translate Absolute Specificity Alignment Overrides
+       ========================================================================== */
+    .rvn-translate-wrapper-mobile {
+      margin: 0 !important;
+      width: 100% !important;
+      display: flex !important;
+      align-items: center !important;
+      padding: 0 !important;
+      box-sizing: border-box !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important; /* Continuous alignment separator line */
+    }
+
+    #google_translate_element {
+      width: 100% !important;
+      display: block !important;
+      margin: 0 !important;
+    }
+
+    /* Completely strips layout framework containers to force flush text alignment */
+    #google_translate_element .goog-te-gadget-simple {
+      width: 100% !important;
+      max-width: 100% !important;
+      height: auto !important;
+      background: transparent !important;
+      border: none !important;
+      border-radius: 0 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: flex-start !important;
+      padding: 16px 12px !important; /* Matches link alignment padding precisely */
+      margin: 0 !important;
+      box-sizing: border-box !important;
+    }
+
+    /* Forces text styling inside the widget elements to line up perfectly */
+    #google_translate_element .goog-te-gadget-simple span, 
+    #google_translate_element .goog-te-menu-value span {
+      font-size: 17px !important; /* Inherits the custom links font sizing metric */
+      font-family: 'Space Grotesk', sans-serif !important;
+      font-weight: 500 !important;
+      color: #CBD5E1 !important;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+
+    #google_translate_element .goog-te-menu-value {
+      width: auto !important;
+      display: flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      background: transparent !important;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+
+    /* Styles the custom downward selector arrow font properties */
+    #google_translate_element .goog-te-menu-value span:last-child {
+      font-size: 12px !important;
+      color: #FF5A1F !important;
+      margin-left: 4px !important;
+      display: inline-block !important;
+    }
+    
+    #google_translate_element .goog-te-gadget-simple:hover span {
+      color: #FF5A1F !important;
+    }
   }
 </style>
